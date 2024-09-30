@@ -1,0 +1,151 @@
+.loginformContainer {
+  background: var(--dark-bg);
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+.loginformBox {
+  width: 400px;
+}
+
+.loginformTitle {
+  font-size: 1.75rem;
+}
+
+.loginformEmail {
+  margin-top: 32px;
+  font-size: 14px;
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginformEmail input,
+.loginformEmailFocus input,
+.pwformInput input,
+.pwformInputFocus input {
+  width: 100%;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.loginformEmail input::placeholder {
+  font-size: 14px;
+}
+
+.loginformEmail label,
+.loginformEmailFocus label,
+.pwformInput label,
+.pwformInputFocus label {
+  font-size: 12px;
+  padding: 0 16px;
+  color: #656565;
+}
+
+.loginformEmailFocus {
+  margin-top: 32px;
+  font-size: 14px;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginformEmailFocus input::placeholder {
+  font-size: 14px;
+}
+
+.loginformSubmit {
+  margin-top: 16px;
+  width: 100%;
+  color: #000;
+  height: 44px;
+  padding: 10px;
+}
+
+.createAccount,
+.umgAccount {
+  margin-top: 16px;
+  height: 44px;
+  width: 100%;
+}
+
+.createAccount span {
+  color: var(--primary-color);
+}
+
+.divider {
+  width: 100%;
+  margin-top: 16px;
+  color: #dc0c0c;
+}
+
+.pwformTitle {
+  font-size: 1.75rem;
+  align-self: center;
+}
+
+.pwformBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.pwformBox form {
+  width: 100%;
+}
+
+.pwformAvatar {
+  margin-top: 32px;
+}
+
+.pwformName {
+  margin-top: 8px;
+}
+
+.pwformInput {
+  margin-top: 32px;
+  font-size: 14px;
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pwformInputBox {
+  position: relative;
+}
+
+.pwformShowBtn {
+  position: absolute;
+  right: 12px;
+  top: 24px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.pwformShowBtn:hover {
+  background-color: transparent;
+}
+
+.pwformInputFocus {
+  margin-top: 32px;
+  font-size: 14px;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

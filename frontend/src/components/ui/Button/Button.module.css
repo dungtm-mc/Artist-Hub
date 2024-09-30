@@ -1,0 +1,48 @@
+.buttonPrimary {
+  border: none;
+  background-color: var(--primary-color);
+  color: #000;
+}
+
+.buttonPrimary:hover {
+  background-color: #9887FF;
+  color: #000;
+}
+
+.buttonPrimary:disabled {
+  background-color: rgba(135, 115, 255, 0.5);
+  color: #000;
+}
+
+.buttonGhost {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+}
+
+.buttonGhost:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #fff;
+}
+
+.buttonInverse {
+  border: none;
+  background-color: #000;
+  color: #fff;
+}
+
+.buttonInverse:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.buttonSecondary {
+  border: none;
+  background-color: var(--white);
+  color: #000;
+}
+
+.buttonSecondary:hover {
+  background-color: var(--white);
+  color: #000;
+}
