@@ -1,0 +1,47 @@
+.padding-xs {
+  padding: 1px 6px;
+}
+
+.padding-sm {
+  padding: 2px 8px;
+}
+
+.padding-md {
+  padding: 3px 10px;
+}
+
+.padding-lg {
+  padding: 4px 12px;
+}
+
+.padding-xl {
+  padding: 6px 14px;
+}
+
+.bg-gray {
+  background-color: var(--gray-hover);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.rounded-xs {
+  border-radius: 4px;
+}
+
+.rounded-sm {
+  border-radius: 8px;
+}
+
+.rounded-md {
+  border-radius: 12px;
+}
+
+.rounded-lg {
+  border-radius: 16px;
+}
+
+.rounded-xl {
+  border-radius: 20px;
+}

@@ -1,0 +1,19 @@
+.background {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--dark-bg);
+}
+
+.overlay {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+}
+
+.children {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

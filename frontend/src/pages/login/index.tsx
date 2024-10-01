@@ -1,6 +1,6 @@
 import Background from '../../components/login/background'
 import LoginForm from '../../components/login/form'
-import styles from './Login.module.css'
+import styles from './login.module.css'
 import React from 'react'
 
 const Login = () => {

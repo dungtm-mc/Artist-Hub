@@ -1,5 +1,5 @@
 import { Avatar, Divider, TextInput } from '@mantine/core'
-import styles from './Form.module.css'
+import styles from './form.module.css'
 import { useForm } from '@mantine/form'
 import { useState } from 'react'
 import UButton from '../../ui/Button'

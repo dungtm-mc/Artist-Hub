@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'Rockfold';
-  src: url('../../fonts/RockfordSans-Light.otf');
+  font-family: 'BosBold';
+  src: url('../../fonts/BostonBold.otf');
 }
 
 .login {
   display: flex;
   width: 100vw;
   height: 100vh;
-  font-family: 'Rockfold';
+  font-family: 'BosBold';
 }

@@ -1,0 +1,40 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerLogo {
+  margin-top: 20px;
+  margin-left: 28px;
+  width: fit-content;
+}
+
+.headerTitle {
+  font-weight: 700;
+}
+
+.headerAccount {
+  padding-top: 20px;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.headerAccountTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerAccountName {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.headerAccountEmail {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
