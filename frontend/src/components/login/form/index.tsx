@@ -6,6 +6,7 @@ import UButton from '../../ui/Button'
 import User from '../../../public/login/user.png'
 import { IconEyeClosed, IconEye } from '@tabler/icons-react'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const LoginForm = () => {
   const [isFocus, setIsFocus] = useState(false)
@@ -166,6 +167,16 @@ const LoginForm = () => {
           </UButton>
         )}
       </div>
+      <span className={styles.umgPrivacy}>
+        By submitting, you agree to the{' '}
+        <Link
+          to="https://privacy.umusic.com/"
+          target="blank"
+          className={styles.umgPrivacyLink}
+        >
+          Universal Music Group Privacy Policy
+        </Link>
+      </span>
     </div>
   )
 }
