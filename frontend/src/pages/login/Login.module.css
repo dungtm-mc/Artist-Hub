@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Rockfold';
+  src: url('../../fonts/RockfordSans-Light.otf');
+}
+
+.login {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Rockfold';
+}

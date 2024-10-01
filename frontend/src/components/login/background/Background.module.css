@@ -1,0 +1,33 @@
+.background {
+  width: 50%;
+  position: relative;
+}
+
+.backgroundOverlay {
+  position: absolute;
+  width: 100%;
+}
+
+.backgroundLogo {
+  position: inherit;
+  margin: 48px 0 0 48px;
+}
+
+.backgroundText {
+  position: inherit;
+  margin: 40% 0 0 40%;
+  line-height: 48px;
+}
+
+.backgroundTextLogo {
+  color: #fff;
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: 0.4px;
+  margin: 0;
+}
+
+.backgroundTextGroup {
+  color: #bbb;
+  font-size: 1rem;
+}

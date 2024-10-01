@@ -17,9 +17,12 @@
     "@mantine/hooks": "^7.13.0",
     "@mantine/modals": "^7.13.0",
     "@mantine/notifications": "^7.13.0",
+    "@tabler/icons-react": "^3.19.0",
     "dayjs": "^1.11.13",
+    "path": "^0.12.7",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
@@ -38,6 +41,7 @@
     "prettier": "^3.3.3",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.1"
+    "vite": "^5.4.1",
+    "vite-tsconfig-paths": "^5.0.1"
   }
 }
