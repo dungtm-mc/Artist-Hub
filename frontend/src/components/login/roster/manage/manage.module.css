@@ -1,0 +1,25 @@
+.manage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.manageTitle {
+  color: var(--text-tertiary);
+  font-size: 14px;
+}
+
+.manageImg {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--white);
+  border-radius: 4px;
+}
+
+.manageBrand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.2rem;
+}
