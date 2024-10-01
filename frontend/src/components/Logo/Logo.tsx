@@ -2,6 +2,7 @@ import DarkLogo from '../../public/umg.png'
 import LightLogo from '../../public/umg-light.png'
 import styles from './Logo.module.css'
 import { useState, useEffect } from 'react'
+import React from 'react'
 
 interface LogoProps {
   mode: 'light' | 'dark'
@@ -22,7 +23,7 @@ const Logo = (props: LogoProps) => {
     <div>
       <img src={logo} className={styles.logo} alt="Logo" />
     </div>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo

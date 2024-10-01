@@ -5,6 +5,7 @@ import './index.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './pages/login/index.tsx'
 import { MantineProvider } from '@mantine/core'
+import React from 'react'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
