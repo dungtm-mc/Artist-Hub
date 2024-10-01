@@ -1,6 +1,8 @@
 .background {
   width: 50%;
   position: relative;
+  height: 100%;
+  overflow: hidden;
 }
 
 .backgroundOverlay {

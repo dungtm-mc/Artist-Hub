@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: center;
   color: var(--white);
+  flex-direction: column;
+  height: 100%;
+  position: relative;
 }
 
 .loginformBox {
@@ -148,4 +151,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.umgPrivacy {
+  justify-self: flex-end;
+  font-size: 0.75rem;
+  color: #656565;
+  position: absolute;
+  bottom: 56px;
+  width: max-content;
+}
+
+.umgPrivacyLink {
+  color: #656565;
 }
