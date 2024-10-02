@@ -10,6 +10,8 @@ export class ArtistEntity extends AbstractEntity {
   @Column()
   password: string
 
-  @ManyToOne(() => LabelEntity, (labelEntity) => labelEntity.artists)
-  label: LabelEntity
+  @ManyToOne(() => LabelEntity, (labelEntity) => labelEntity.artists, {
+    nullable: true
+  })
+  label?: LabelEntity
 }
