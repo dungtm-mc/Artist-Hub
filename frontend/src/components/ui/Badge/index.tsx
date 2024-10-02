@@ -1,5 +1,5 @@
 import { MantineSize } from '@mantine/core'
-import React, { ReactNode, useEffect, useState } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 import styles from './badge.module.css'
 
 interface BadgeProps {

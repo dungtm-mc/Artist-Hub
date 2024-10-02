@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './manage.module.css'
 import rr from '../../../../public/login/roster/rr.png'
 

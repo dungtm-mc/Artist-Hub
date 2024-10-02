@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './header.module.css'
 import { Avatar } from '@mantine/core'
 import user from '../../../../public/login/user.png'

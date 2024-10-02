@@ -1,7 +1,6 @@
 import { Button, MantineRadius, MantineSize } from '@mantine/core'
 import styles from './button.module.css'
 import { ReactNode, useEffect, useState } from 'react'
-import React from 'react'
 
 interface ButtonProps {
   variant: 'primary' | 'inverse' | 'secondary' | 'ghost'
