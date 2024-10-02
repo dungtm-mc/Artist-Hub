@@ -4,10 +4,12 @@ import image from '../../../../../public/overview/artist/avatar.png'
 import { useEffect, useState } from 'react'
 import { Avatar } from '@mantine/core'
 import { IconChevronDown } from '@tabler/icons-react'
+import ArtistModal from './modal'
 
 const Artist = () => {
   const [avatar, setAvatar] = useState('')
   const [name, setName] = useState('')
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     setAvatar(image)
@@ -17,7 +19,12 @@ const Artist = () => {
   return (
     <div className={styles.artist}>
       <div className={styles.artistBox}>
-        <UButton size="md" variant="ghost" className={styles.artistUBtn}>
+        <UButton
+          size="md"
+          variant="ghost"
+          className={`${styles.artistUBtn} ${isModalOpen && styles.modalOpen}`}
+          onClick={() => setIsModalOpen(!isModalOpen)}
+        >
           <div className={styles.artistBtn}>
             <div className={styles.artistName}>
               <Avatar src={avatar} size="md" />
@@ -26,6 +33,7 @@ const Artist = () => {
             <IconChevronDown className={styles.artistIcon} />
           </div>
         </UButton>
+        <ArtistModal isOpen={isModalOpen} />
       </div>
     </div>
   )

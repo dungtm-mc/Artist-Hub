@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
 import styles from './header.module.css'
-import { Avatar } from '@mantine/core'
 import user from '../../../../public/login/user.png'
-import UBadge from '../../../ui/Badge'
+import Account from '../../../common/account'
 
 const RosterHeader = () => {
   const [avatar, setAvatar] = useState('')
@@ -24,18 +23,13 @@ const RosterHeader = () => {
         <br />
         <span>Business</span>
       </div>
-      <div className={styles.headerAccount}>
-        <Avatar src={avatar} />
-        <div className={styles.headerAccountTop}>
-          <div className={styles.headerAccountName}>
-            <span>{name}</span>
-            <UBadge size="xs" color="gray" radius="xs">
-              {role}
-            </UBadge>
-          </div>
-          <span className={styles.headerAccountEmail}>{email}</span>
-        </div>
-      </div>
+      <Account
+        avatar={avatar}
+        name={name}
+        role={role}
+        email={email}
+        className={styles.headerAccount}
+      />
     </div>
   )
 }

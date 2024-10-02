@@ -1,7 +1,6 @@
-import { NavLink } from '@mantine/core'
 import { ReactNode, useEffect, useState } from 'react'
 import styles from './item.module.css'
-import { Link, useLocation } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 interface SidebarItem {
   icon: ReactNode
@@ -14,17 +13,16 @@ const SidebarItem = (props: SidebarItem) => {
   const [isActive, setIsActive] = useState(false)
 
   useEffect(() => {
-    setIsActive(location.pathname === props.to)
+    setIsActive(location.pathname.startsWith(props.to))
   }, [location.pathname, props.to])
 
   return (
-    <Link to={props.to} className={styles.nav}>
-      <NavLink
-        label={props.label}
-        leftSection={props.icon}
-        className={`${styles.link} ${isActive && styles.active}`}
-      ></NavLink>
-    </Link>
+    <NavLink to={props.to} className={styles.nav}>
+      <div className={`${styles.link} ${isActive && styles.active}`}>
+        <span className={styles.icon}>{props.icon}</span>
+        <span>{props.label}</span>
+      </div>
+    </NavLink>
   )
 }
 

@@ -5,6 +5,7 @@
     rgba(135, 115, 255, 0) 100%
   );
   height: 72px;
+  position: relative;
 }
 
 .artistBox {
@@ -16,6 +17,8 @@
   width: 100%;
   height: 100%;
   padding: 0;
+  position: relative;
+  border-radius: 8px;
 }
 
 .artistUBtn span {
@@ -42,4 +45,9 @@
 
 .artistIcon {
   height: 20px;
+}
+
+.modalOpen,
+.artistUBtn:hover {
+  background-color: rgba(0, 0, 0, 0.15);
 }
