@@ -1,0 +1,45 @@
+.artist {
+  background: linear-gradient(
+    180deg,
+    rgba(135, 115, 255, 0.1) 0%,
+    rgba(135, 115, 255, 0) 100%
+  );
+  height: 72px;
+}
+
+.artistBox {
+  padding: 8px;
+  height: 100%;
+}
+
+.artistUBtn {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.artistUBtn span {
+  width: 100%;
+  padding: 0 4px;
+}
+
+.artistUBtn:hover {
+  background-color: transparent;
+}
+
+.artistBtn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.artistName {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.artistIcon {
+  height: 20px;
+}

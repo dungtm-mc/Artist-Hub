@@ -1,5 +1,5 @@
 import { Avatar } from '@mantine/core'
-import React from 'react'
+
 import styles from './item.module.css'
 
 interface RosterItemProps {

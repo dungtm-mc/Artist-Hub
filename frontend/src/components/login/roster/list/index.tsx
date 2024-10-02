@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './list.module.css'
 import avatar from '../../../../public/login/roster/avatar.png'
 import RosterItem from './item'

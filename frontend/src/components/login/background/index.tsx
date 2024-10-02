@@ -2,7 +2,6 @@ import Logo from '../../Logo/logo'
 import styles from './background.module.css'
 import Color from '../../../public/login/color.png'
 import Overlay from '../../../public/login/overlay.png'
-import React from 'react'
 
 const Background = () => {
   return (

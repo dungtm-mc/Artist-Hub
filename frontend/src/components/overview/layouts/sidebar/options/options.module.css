@@ -1,0 +1,11 @@
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.optionsTitle {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  padding: 4px 16px;
+}

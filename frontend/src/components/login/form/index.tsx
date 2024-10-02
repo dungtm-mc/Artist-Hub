@@ -5,7 +5,7 @@ import { useState } from 'react'
 import UButton from '../../ui/Button'
 import User from '../../../public/login/user.png'
 import { IconEyeClosed, IconEye } from '@tabler/icons-react'
-import React from 'react'
+
 import { Link } from 'react-router-dom'
 
 const LoginForm = () => {

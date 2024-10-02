@@ -1,0 +1,15 @@
+.sidebarBg {
+  background-color: var(--sidebar-bg);
+  width: 212px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.options {
+  flex: 1;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
