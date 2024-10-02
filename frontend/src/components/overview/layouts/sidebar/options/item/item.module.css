@@ -6,10 +6,31 @@
 .link {
   padding: 8px 16px;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.link:hover {
+  background-color: #ffffff12;
 }
 
 .active {
   color: var(--primary-color);
   background-color: #8773ff33;
   font-weight: 700;
+}
+
+.active:hover {
+  cursor: default;
+  background-color: #8773ff33;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.icon svg {
+  width: 16px;
 }

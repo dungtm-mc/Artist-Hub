@@ -9,6 +9,7 @@ import { MantineProvider } from '@mantine/core'
 import LoginLayout from './layouts/login/index.tsx'
 import LoginRoster from './pages/login/roster/index.tsx'
 import OverviewLayout from './layouts/overview/index.tsx'
+import Overview from './pages/overview/index.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -20,7 +21,9 @@ createRoot(document.getElementById('root')!).render(
             <Route path="" element={<Login />} />
             <Route path="roster" element={<LoginRoster />} />
           </Route>
-          <Route path="/overview" element={<OverviewLayout />}></Route>
+          <Route path="/overview" element={<OverviewLayout />}>
+            <Route path="" element={<Overview />}></Route>
+          </Route>
         </Routes>
       </BrowserRouter>
     </MantineProvider>

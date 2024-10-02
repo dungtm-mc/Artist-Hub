@@ -1,0 +1,22 @@
+.account {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.accountTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.accountName {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.accountEmail {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
