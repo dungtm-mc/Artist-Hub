@@ -6,7 +6,7 @@ import { CreateLabelDto } from './dto/createLabel.dto'
 export class LabelService {
   constructor(private connection: DataSource) {}
 
-  async create(name: string) {
+  async create(name: string, description: string) {
     const label = await this.connection
       .getRepository('LabelEntity')
       .findOneBy({ name })
@@ -15,18 +15,12 @@ export class LabelService {
     }
     const newLabel = this.connection
       .getRepository('LabelEntity')
-      .create({ name })
+      .create({ name, description })
     await this.connection.getRepository('LabelEntity').save(newLabel)
     return newLabel
   }
 
-  async addManager(
-    id: number,
-    email: string,
-    password: string,
-    name: string,
-    role: string
-  ) {
+  async addManager(id: number, managerId: number) {
     const label = await this.connection.getRepository('LabelEntity').findOne({
       where: { id: id },
       relations: ['manager']
@@ -34,21 +28,33 @@ export class LabelService {
     if (!label) {
       throw new Error('This label does not exist!')
     }
-    const user = this.connection
+    const manager = await this.connection
       .getRepository('UserEntity')
-      .findOneBy({ email })
-    if (user) {
-      throw new Error('This email already exists')
+      .findOneBy({ id: managerId })
+    if (!manager) {
+      throw new Error('This manager does not exist!')
     }
-    const manager = this.connection.getRepository('UserEntity').create({
-      email,
-      password,
-      name,
-      role
-    })
-    await this.connection.getRepository('UserEntity').save(manager)
     label.manager = manager
     await this.connection.getRepository('LabelEntity').save(label)
     return label
+  }
+
+  async addArtist(id: number, artistId: number) {
+    const label = await this.connection.getRepository('LabelEntity').findOne({
+      where: { id: id },
+      relations: ['artists']
+    })
+    if (!label) {
+      throw new Error('This label does not exist!')
+    }
+    const artist = await this.connection
+      .getRepository('ArtistEntity')
+      .findOneBy({ id: artistId })
+    if (!artist) {
+      throw new Error('This artist does not exist!')
+    }
+    artist.label = label
+    await this.connection.getRepository('ArtistEntity').save(artist)
+    return artist
   }
 }

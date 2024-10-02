@@ -8,6 +8,9 @@ export class LabelEntity extends AbstractEntity {
   @Column()
   name: string
 
+  @Column()
+  dewcription: string
+
   @OneToMany(() => UserEntity, (userEntity) => userEntity.label)
   users: UserEntity[]
 
