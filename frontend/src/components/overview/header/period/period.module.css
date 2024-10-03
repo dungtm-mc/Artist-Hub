@@ -1,0 +1,16 @@
+.options {
+  display: flex;
+  gap: 8px;
+}
+
+.unactive {
+  font-weight: 400;
+  color: var(--text-tertiary);
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.unactive:hover {
+  font-weight: 400;
+}

@@ -1,0 +1,23 @@
+.btn {
+  background-color: var(--gray-hover);
+  width: fit-content;
+  overflow: hidden;
+  transition:
+    background-color 0.3s ease,
+    width 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--white);
+  color: #000;
+}
+
+.btn:hover .label {
+  opacity: 1;
+}
+
+.label {
+  padding-left: 4px;
+  opacity: 0;
+  transform: opacity 0.3 ease;
+}
