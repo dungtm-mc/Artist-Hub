@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import styles from './background.module.css'
 import overlay from '../../../../public/login/roster/overlay.png'
 

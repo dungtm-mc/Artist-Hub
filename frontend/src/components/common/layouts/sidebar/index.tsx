@@ -12,7 +12,7 @@ import { useEffect, useState } from 'react'
 import image from '../../../../public/login/user.png'
 import Account from '../../../common/account'
 
-const OverviewSidebar = () => {
+const CommonSidebar = () => {
   const options = [
     {
       items: [
@@ -86,4 +86,4 @@ const OverviewSidebar = () => {
   )
 }
 
-export default OverviewSidebar
+export default CommonSidebar
