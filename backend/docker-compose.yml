@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  blogging:
+    container_name: lito-artist-hub
+    image: postgres:16-alpine
+    ports:
+      - '5432:5432'
+    command: -c shared_buffers=500MB -c fsync=off
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    healthcheck:
+      test: 'pg_isready'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - lito
+
+networks:
+  lito:
+
+volumes:
+  postgres_data:
+    driver: local
