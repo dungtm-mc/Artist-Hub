@@ -2,6 +2,7 @@ import { Role } from '../../role/role.enum'
 import { AbstractEntity } from '../../common/abstract.entity'
 import { Column, Entity, ManyToOne, OneToMany } from 'typeorm'
 import { LabelEntity } from '../../label/entities/label.entity'
+import { ArtistEntity } from 'src/artist/entities/artist.entity'
 
 @Entity()
 export class UserEntity extends AbstractEntity {
@@ -22,4 +23,7 @@ export class UserEntity extends AbstractEntity {
 
   @OneToMany(() => LabelEntity, (labelEntity) => labelEntity.manager)
   labelMangaged: LabelEntity[]
+
+  @OneToMany(() => ArtistEntity, (artistEntity) => artistEntity.manager)
+  artistManaged: ArtistEntity[]
 }

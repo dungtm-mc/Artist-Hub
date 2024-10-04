@@ -19,4 +19,22 @@ export class ArtistService {
     await this.connection.getRepository('ArtistEntity').save(newArtist)
     return newArtist
   }
+
+  async assign(id: number, managerId: number) {
+    const artist = await this.connection
+      .getRepository('ArtistEntity')
+      .findOneBy({ id })
+    if (!artist) {
+      throw new Error('This artist does not exist!')
+    }
+    const manager = await this.connection
+      .getRepository('UserEntity')
+      .findOneBy({ id: managerId })
+    if (!manager) {
+      throw new Error('This manager does not exist!')
+    }
+    artist.manager = manager
+    await this.connection.getRepository('ArtistEntity').save(artist)
+    return artist
+  }
 }
