@@ -1,4 +1,4 @@
-import { Role } from '../../role/role.enum'
+import { Role } from '../../enums'
 import { AbstractEntity } from '../../common/abstract.entity'
 import { Column, Entity, ManyToOne, OneToMany } from 'typeorm'
 import { LabelEntity } from '../../label/entities/label.entity'

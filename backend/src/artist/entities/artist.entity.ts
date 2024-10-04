@@ -1,7 +1,8 @@
 import { LabelEntity } from '../../label/entities/label.entity'
 import { AbstractEntity } from '../../common/abstract.entity'
-import { Column, Entity, ManyToOne } from 'typeorm'
+import { Column, Entity, ManyToOne, OneToMany } from 'typeorm'
 import { UserEntity } from '../../user/entities/user.entity'
+import { CampaignEntity } from '../../campaign/entities/campaign.entity'
 
 @Entity()
 export class ArtistEntity extends AbstractEntity {
@@ -21,4 +22,7 @@ export class ArtistEntity extends AbstractEntity {
 
   @ManyToOne(() => UserEntity, { nullable: true })
   manager?: UserEntity
+
+  @OneToMany(() => CampaignEntity, (campaignEntity) => campaignEntity.artist)
+  campaigns: CampaignEntity[]
 }
