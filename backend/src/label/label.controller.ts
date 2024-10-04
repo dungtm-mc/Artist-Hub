@@ -7,7 +7,7 @@ export class LabelController {
   constructor(private labelService: LabelService) {}
   @Post()
   async create(createLabelDto: CreateLabelDto) {
-    const { name } = createLabelDto
-    return this.labelService.create(name)
+    const { name, description } = createLabelDto
+    return this.labelService.create(name, description)
   }
 }
