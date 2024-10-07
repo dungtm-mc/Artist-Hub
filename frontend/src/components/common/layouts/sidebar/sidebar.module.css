@@ -22,3 +22,11 @@
   width: 100%;
   flex-direction: column;
 }
+
+.options .react-grid-item {
+  transform: translateX(10px);
+}
+
+.grid {
+  position: relative;
+}

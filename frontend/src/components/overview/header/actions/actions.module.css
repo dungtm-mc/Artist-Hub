@@ -1,0 +1,11 @@
+.actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
