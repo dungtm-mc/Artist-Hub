@@ -7,6 +7,7 @@ import { CampaignModule } from './campaign/campaign.module'
 import { FanModule } from './fan/fan.module'
 import { LabelModule } from './label/label.module'
 import { UserModule } from './user/user.module'
+import { ProductModule } from './product/product.module'
 
 @Module({
   imports: [
@@ -15,7 +16,8 @@ import { UserModule } from './user/user.module'
     CampaignModule,
     FanModule,
     LabelModule,
-    UserModule
+    UserModule,
+    ProductModule
   ],
   controllers: [AppController],
   providers: [AppService]
