@@ -6,16 +6,16 @@ import { DataSource } from 'typeorm'
 export class ArtistService {
   constructor(private connection: DataSource) {}
 
-  async create(email: string, password: string) {
+  async create(name: string, bio: string) {
     const artist = await this.connection
       .getRepository('ArtistEntity')
-      .findOneBy({ email })
+      .findOneBy({ name })
     if (artist) {
       throw new Error('This email has already been registered')
     }
     const newArtist = this.connection
       .getRepository('ArtistEntity')
-      .create({ email, password })
+      .create({ name, bio })
     await this.connection.getRepository('ArtistEntity').save(newArtist)
     return newArtist
   }
