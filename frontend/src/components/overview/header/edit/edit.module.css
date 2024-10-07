@@ -21,3 +21,17 @@
   opacity: 0;
   transform: opacity 0.3 ease;
 }
+
+.editLabel {
+  color: var(--primary-color);
+  font-weight: 700;
+  border-radius: var(--16, 16px);
+  background: linear-gradient(
+    180deg,
+    rgba(135, 115, 255, 0.2) 0%,
+    rgba(135, 115, 255, 0) 100%
+  );
+  padding: 8px 16px;
+  border-radius: 1000px;
+  text-align: center;
+}

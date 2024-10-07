@@ -8,4 +8,18 @@
   font-size: 0.75rem;
   color: var(--text-tertiary);
   padding: 4px 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.optionsEdit {
+  border-radius: var(--layout-radius-container, 12px);
+  border: 1px solid var(--border-primary, #2f2f2f);
+  background: var(--surface-l2-card, #181818);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.optionsEdit .optionsTitle {
+  transform: translate(-2px, 2px);
 }
