@@ -2,8 +2,12 @@ import { Stepper } from '@mantine/core'
 import styles from './feed.module.css'
 import { IconShoppingCart, IconTicket } from '@tabler/icons-react'
 import UButton from '../../../ui/Button'
+import { useContext } from 'react'
+import { EditContext } from '../../../../context/EditContext'
 
 const Feed = () => {
+  const context = useContext(EditContext)
+
   const feedList = [
     {
       type: 'music',
@@ -36,7 +40,7 @@ const Feed = () => {
   }
 
   return (
-    <div className={styles.feed}>
+    <div className={`${styles.feed} ${context?.isEditing && styles.editFeed}`}>
       <div className={styles.feedTitle}>Recent Activity Feed</div>
       <Stepper
         iconSize={32}
