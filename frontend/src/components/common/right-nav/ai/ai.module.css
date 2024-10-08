@@ -57,3 +57,14 @@
   width: 60%;
   margin: 8px auto 0 auto;
 }
+
+.editOption {
+  display: flex;
+  background-color: #161616;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1000px;
+  font-size: 0.75rem;
+}
