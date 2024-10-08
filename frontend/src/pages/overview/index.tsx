@@ -1,5 +1,7 @@
+import OverviewPage from '../../components/overview'
+
 const Overview = () => {
-  return <span>Overview</span>
+  return <OverviewPage />
 }
 
 export default Overview

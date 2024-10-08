@@ -1,0 +1,34 @@
+.feed {
+  width: 100%;
+  height: fit-content;
+  padding-top: 20px;
+  padding-left: 4px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feedTitle {
+  font-weight: 700;
+  min-height: 40px;
+  padding-top: 16px;
+}
+
+.feedList {
+  margin-top: 16px;
+  height: 270px;
+}
+
+.feedItemLabel {
+  font-size: 14px;
+}
+
+.feedItemDate {
+  font-size: 14px;
+}
+
+.more {
+  font-weight: 400;
+  margin: 0 auto;
+  justify-self: center;
+}

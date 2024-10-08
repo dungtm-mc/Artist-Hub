@@ -1,0 +1,5 @@
+.overview {
+  margin: 40px 16px 0 16px;
+  background-color: var(--page-bg);
+  flex-grow: 1;
+}
