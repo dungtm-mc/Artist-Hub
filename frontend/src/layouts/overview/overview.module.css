@@ -21,5 +21,14 @@
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+}
+
+.page {
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  height: calc(100vh - 72px);
 }

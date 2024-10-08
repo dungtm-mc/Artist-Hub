@@ -7,6 +7,7 @@ import PeriodOptions from '../../components/overview/header/period'
 import { useState } from 'react'
 import { EditContext } from '../../context/EditContext'
 import EditActions from '../../components/overview/header/actions'
+import RightNav from '../../components/common/right-nav'
 
 const OverviewLayout = () => {
   const [isEditing, setIsEditing] = useState(false)
@@ -21,7 +22,10 @@ const OverviewLayout = () => {
             afterTitle={<EditButton />}
             endContent={isEditing ? <EditActions /> : <PeriodOptions />}
           />
-          <Outlet />
+          <div className={styles.page}>
+            <Outlet />
+            <RightNav />
+          </div>
         </div>
       </div>
     </EditContext.Provider>
