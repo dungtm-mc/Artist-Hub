@@ -1,0 +1,32 @@
+.item {
+  height: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.itemBar {
+  height: 100%;
+  background-color: var(--barchart-item-color);
+  width: var(--barchart-item-perc);
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.category {
+  font-size: 14px;
+}
+
+.divider {
+  position: absolute;
+  width: 100%;
+  background-color: #2d2d2f;
+  height: 1px;
+  bottom: 0;
+}
