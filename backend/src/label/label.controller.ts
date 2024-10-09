@@ -20,7 +20,7 @@ export class LabelController {
 
   @Patch('/manager/:id')
   @UseGuards(AuthGuard, RoleGuard)
-  @Roles(Role.ADMIN)
+  @Roles(Role.ADMIN, Role.LABEL_MAGAGER)
   async addManager(
     @Param('id') id: number,
     @Body('managerId') managerId: number
