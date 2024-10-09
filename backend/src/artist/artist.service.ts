@@ -37,4 +37,71 @@ export class ArtistService {
     await this.connection.getRepository('ArtistEntity').save(artist)
     return artist
   }
+
+  async getFanCountsByYearForArtists(artistId: number) {
+    const result = await this.connection
+      .getRepository('ArtistEntity')
+      .createQueryBuilder('artist')
+      .leftJoinAndSelect('artist.campaigns', 'campain')
+      .leftJoinAndSelect('campain.fans', 'fan')
+      .select(
+        "artist.id AS artistId, artist.name AS artistName, DATE_TRUNC('year', fan.createdAt) AS year"
+      )
+      .addSelect('COUNT(fan.id) AS fanCount')
+      .where('artist.id = :artistId', { artistId })
+      .groupBy('artist.id, year')
+      .orderBy('year', 'ASC')
+      .addOrderBy('year', 'ASC')
+      .getRawMany()
+    return result.map((row) => ({
+      artistId: row.artistId,
+      artistName: row.artistName,
+      year: row.year.getFullYear(),
+      fanCount: Number(row.fanCount)
+    }))
+  }
+
+  async getFanCountsByMonthForArtists(artistId: number) {
+    const result = await this.connection
+      .getRepository('ArtistEntity')
+      .createQueryBuilder('artist')
+      .leftJoinAndSelect('artist.campaigns', 'campain')
+      .leftJoinAndSelect('campain.fans', 'fan')
+      .select('artist.id AS artistId, artist.name AS artistName')
+      .addSelect("TO_CHAR(fan.createdAt, 'YYYY-MM') AS month")
+      .addSelect('COUNT(fan.id) AS fanCount')
+      .where('artist.id = :artistId', { artistId })
+      .groupBy('artist.id, month')
+      .orderBy('month', 'ASC')
+      .getRawMany()
+    return result.map((row) => ({
+      artistId: row.artistId,
+      artistName: row.artistName,
+      year: row.year.getFullYear(),
+      fanCount: Number(row.fanCount)
+    }))
+  }
+
+  async getFanCountsByChannelsForArtists(artistId: number) {
+    const result = await this.connection
+      .getRepository('ArtistEntity')
+      .createQueryBuilder('artist')
+      .leftJoinAndSelect('artist.campaigns', 'campain')
+      .leftJoinAndSelect('campain.fans', 'fan')
+      .select(
+        'artist.id as artistId, artist.name as artistName, fan.channel AS channel'
+      )
+      .addSelect('COUNT (fan.id) AS fanCount')
+      .where('artist.id = :artistId', { artistId })
+      .groupBy('artist.id, fan.channel')
+      .orderBy('fan.channel', 'ASC')
+      .getRawMany()
+
+    return result.map((row) => ({
+      artistId: row.artistId,
+      artistName: row.artistName,
+      channel: row.channel,
+      fanCount: Number(row.fanCount)
+    }))
+  }
 }
