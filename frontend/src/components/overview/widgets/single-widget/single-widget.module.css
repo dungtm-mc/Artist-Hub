@@ -1,0 +1,49 @@
+.widget {
+  padding: 24px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 152px;
+}
+
+.above {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5rem;
+}
+
+.title {
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.stats {
+  background: linear-gradient(0deg, #fff 23.68%, #c7c7c7 73.68%);
+  background-clip: text;
+  color: transparent;
+  font-size: 1.75rem;
+}
+
+.under {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.change {
+  color: #06b1a8;
+  display: flex;
+  align-items: center;
+}
+
+.downChange {
+  color: #f94e57;
+}
+
+.compare {
+  color: var(--text-tertiary);
+}

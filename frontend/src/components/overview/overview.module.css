@@ -1,5 +1,24 @@
 .overview {
-  margin: 40px 16px 0 16px;
+  padding: 88px 12px 0 16px;
   background-color: var(--page-bg);
   flex-grow: 1;
+  margin-right: 4px;
+}
+
+.artist {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.monthlyListeners {
+  color: var(--text-tertiary);
+}
+
+.widgets {
+  margin-top: 24px;
 }
