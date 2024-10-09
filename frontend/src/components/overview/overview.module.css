@@ -3,6 +3,8 @@
   background-color: var(--page-bg);
   flex-grow: 1;
   margin-right: 4px;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 
 .artist {
@@ -20,5 +22,6 @@
 }
 
 .widgets {
+  padding-bottom: 40px;
   margin-top: 24px;
 }

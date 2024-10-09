@@ -1,4 +1,5 @@
 import BarchartWidget from './barchart-widget'
+import CampaignWidget from './campaign-widget'
 import SingleWidget from './single-widget'
 import styles from './widgets.module.css'
 
@@ -59,6 +60,9 @@ const Widgets = () => {
           information={testChartWidget.information}
           chart={testChartWidget.chart}
         />
+      </div>
+      <div className={styles.test3}>
+        <CampaignWidget />
       </div>
     </>
   )
