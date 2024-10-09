@@ -7,15 +7,19 @@ import { CampaignModule } from './campaign/campaign.module'
 import { FanModule } from './fan/fan.module'
 import { LabelModule } from './label/label.module'
 import { UserModule } from './user/user.module'
+import { ProductModule } from './product/product.module'
+import { AuthModule } from './auth/auth.module'
 
 @Module({
   imports: [
+    AuthModule,
     ArtistModule,
     DBModule,
     CampaignModule,
     FanModule,
     LabelModule,
-    UserModule
+    UserModule,
+    ProductModule
   ],
   controllers: [AppController],
   providers: [AppService]

@@ -8,13 +8,10 @@ import { ProductEntity } from '../../product/entities/product.entity'
 @Entity()
 export class ArtistEntity extends AbstractEntity {
   @Column()
-  email: string
-
-  @Column()
-  password: string
-
-  @Column()
   name: string
+
+  @Column()
+  bio: string
 
   @ManyToOne(() => LabelEntity, (labelEntity) => labelEntity.artists, {
     nullable: true

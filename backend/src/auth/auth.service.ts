@@ -4,7 +4,7 @@ import * as bcrypt from 'bcryptjs'
 import { JwtService } from '@nestjs/jwt'
 
 @Injectable()
-export class LoginService {
+export class AuthService {
   constructor(
     private connection: DataSource,
     private jwtService: JwtService
