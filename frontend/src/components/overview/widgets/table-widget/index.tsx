@@ -16,7 +16,7 @@ const TableWidget = (props: TableWidgetProps) => {
     <Table.Tr>
       <Table.Td>{row.segment}</Table.Td>
       <Table.Td>{row.fans}</Table.Td>
-      <Table.Td>{row.ctr}</Table.Td>
+      <Table.Td>{row.ctr}%</Table.Td>
       <Table.Td className={styles.cellRight}>{row.avgRevenue}</Table.Td>
     </Table.Tr>
   ))

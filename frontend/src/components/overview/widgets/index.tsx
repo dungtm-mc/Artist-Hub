@@ -1,5 +1,6 @@
 import BarchartWidget from './barchart-widget'
 import CampaignWidget from './campaign-widget'
+import LinechartWidget from './linechart-widget'
 import SingleWidget from './single-widget'
 import TableWidget from './table-widget'
 import styles from './widgets.module.css'
@@ -79,6 +80,45 @@ const Widgets = () => {
     ]
   }
 
+  const testLinechartWidget = {
+    period: 'Year',
+    data: [
+      {
+        time: '2019',
+        value: 100000
+      },
+      {
+        time: '2020',
+        value: 200000
+      },
+      {
+        time: '2021',
+        value: 150000
+      },
+      {
+        time: '2022',
+        value: 170000
+      },
+      {
+        time: '2023',
+        value: 270000
+      },
+      {
+        time: '2024',
+        value: 250000
+      },
+      {
+        time: '2025',
+        value: 250000
+      },
+      {
+        time: '2026',
+        value: 250000
+      }
+    ],
+    color: 'green'
+  }
+
   return (
     <>
       <div className={styles.test}>
@@ -105,6 +145,13 @@ const Widgets = () => {
         <TableWidget
           title={testTableWidget.title}
           data={testTableWidget.data}
+        />
+      </div>
+      <div className={styles.test5}>
+        <LinechartWidget
+          period={testLinechartWidget.period}
+          color={testLinechartWidget.color}
+          data={testLinechartWidget.data}
         />
       </div>
     </>
