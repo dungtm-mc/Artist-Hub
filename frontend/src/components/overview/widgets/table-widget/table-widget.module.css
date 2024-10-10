@@ -1,0 +1,45 @@
+.widget {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  height: 320px;
+}
+
+.title {
+  padding: 16px 24px 8px 24px;
+}
+
+.headerRow::before {
+  content: '';
+  display: block;
+  height: 16px;
+}
+
+.header {
+  text-transform: uppercase;
+  text-align: start;
+  color: var(--text-tertiary);
+  font-weight: 400;
+}
+
+.row {
+  width: inherit;
+}
+
+.cellRight {
+  text-align: end;
+}
+
+.widget tbody tr {
+  border: none;
+}
+
+.table {
+  /* padding: 0 24px; */
+  font-size: 14px;
+}
+
+.table tbody::before {
+  content: '';
+  display: block;
+  height: 16px;
+}
