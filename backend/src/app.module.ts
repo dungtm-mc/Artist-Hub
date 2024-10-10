@@ -9,6 +9,8 @@ import { LabelModule } from './label/label.module'
 import { UserModule } from './user/user.module'
 import { ProductModule } from './product/product.module'
 import { AuthModule } from './auth/auth.module'
+import { ArtistPageModule } from './artistPage/artistPage.module'
+import { WidgetModule } from './widget/widget.module'
 
 @Module({
   imports: [
@@ -19,7 +21,9 @@ import { AuthModule } from './auth/auth.module'
     FanModule,
     LabelModule,
     UserModule,
-    ProductModule
+    ProductModule,
+    ArtistPageModule,
+    WidgetModule
   ],
   controllers: [AppController],
   providers: [AppService]

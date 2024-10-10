@@ -14,6 +14,6 @@ export class WidgetEntity extends AbstractEntity {
   @ManyToOne(() => ArtistPageEntity)
   artistPage: ArtistPageEntity
 
-  @Column({ type: 'varchar', length: 100 })
-  datasource: string
+  @Column({ type: 'varchar', length: 100, nullable: true })
+  datasource?: string
 }

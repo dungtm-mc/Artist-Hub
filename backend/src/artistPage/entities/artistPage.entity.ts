@@ -1,7 +1,7 @@
 import { WidgetEntity } from '../../widget/entities/widget.entity'
 import { ArtistEntity } from '../../artist/entities/artist.entity'
 import { AbstractEntity } from '../../common/abstract.entity'
-import { Column, Entity, JoinColumn, OneToMany, OneToOne } from 'typeorm'
+import { Column, Entity, OneToMany, OneToOne } from 'typeorm'
 
 @Entity()
 export class ArtistPageEntity extends AbstractEntity {
@@ -12,7 +12,6 @@ export class ArtistPageEntity extends AbstractEntity {
   editMode: boolean
 
   @OneToOne(() => ArtistEntity)
-  @JoinColumn()
   artist: ArtistEntity
 
   @OneToMany(() => WidgetEntity, (widgetEntity) => widgetEntity.artistPage)
