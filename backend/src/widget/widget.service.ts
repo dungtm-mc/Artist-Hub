@@ -19,10 +19,28 @@ export class WidgetService {
       artistPage: artist.page
     })
     await this.connection.getRepository('WidgetEntity').save(widget)
+    return widget
   }
-  async updateWidgetDataScouce(widgetId: number, artistId: number) {
+
+  async updateWidgetDataScouceYear(widgetId: number, artistId: number) {
     const fanData =
       await this.artistService.getFanCountsByYearForArtists(artistId)
+    await this.connection
+      .getRepository('WidgetEntity')
+      .update(widgetId, { datasource: JSON.stringify(fanData) })
+  }
+
+  async updateWidgetDataScouceMonth(widgetId: number, artistId: number) {
+    const fanData =
+      await this.artistService.getFanCountsByMonthForArtists(artistId)
+    await this.connection
+      .getRepository('WidgetEntity')
+      .update(widgetId, { datasource: JSON.stringify(fanData) })
+  }
+
+  async updateWidgetDataScouceChannels(widgetId: number, artistId: number) {
+    const fanData =
+      await this.artistService.getFanCountsByChannelsForArtists(artistId)
     await this.connection
       .getRepository('WidgetEntity')
       .update(widgetId, { datasource: JSON.stringify(fanData) })
