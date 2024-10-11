@@ -1,4 +1,13 @@
-import { Body, Controller, Param, Patch, Post, UseGuards } from '@nestjs/common'
+import {
+  Body,
+  Controller,
+  Get,
+  Param,
+  Patch,
+  Post,
+  Request,
+  UseGuards
+} from '@nestjs/common'
 import { CreateArtistDto } from './dto/create-artist.dto'
 import { ArtistService } from './artist.service'
 import { AuthGuard } from '../auth/auth.guard'
@@ -23,5 +32,10 @@ export class ArtistController {
   @Roles(Role.LABEL_MAGAGER)
   async assign(@Param('id') id: number, @Body('managerId') managerId: number) {
     return this.artistService.assign(id, managerId)
+  }
+
+  @Get('year')
+  async getFanCountsByYearForArtists(artistid: number) {
+    return this.artistService.getFanCountsByYearForArtists(artistid)
   }
 }

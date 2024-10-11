@@ -1,9 +1,17 @@
 import { LabelEntity } from '../../label/entities/label.entity'
 import { AbstractEntity } from '../../common/abstract.entity'
-import { Column, Entity, ManyToOne, OneToMany } from 'typeorm'
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  OneToOne
+} from 'typeorm'
 import { UserEntity } from '../../user/entities/user.entity'
 import { CampaignEntity } from '../../campaign/entities/campaign.entity'
 import { ProductEntity } from '../../product/entities/product.entity'
+import { ArtistPageEntity } from '../../artistPage/entities/artistPage.entity'
 
 @Entity()
 export class ArtistEntity extends AbstractEntity {
@@ -26,4 +34,8 @@ export class ArtistEntity extends AbstractEntity {
 
   @OneToMany(() => ProductEntity, (productEntity) => productEntity.artist)
   products: ProductEntity[]
+
+  @OneToOne(() => ArtistPageEntity)
+  @JoinColumn()
+  page: ArtistPageEntity
 }
