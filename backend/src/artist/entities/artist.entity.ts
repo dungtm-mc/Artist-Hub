@@ -12,6 +12,7 @@ import { UserEntity } from '../../user/entities/user.entity'
 import { CampaignEntity } from '../../campaign/entities/campaign.entity'
 import { ProductEntity } from '../../product/entities/product.entity'
 import { ArtistPageEntity } from '../../artistPage/entities/artistPage.entity'
+import { SegmentEntity } from '../../segments/entities/segment.entity'
 
 @Entity()
 export class ArtistEntity extends AbstractEntity {
@@ -38,4 +39,7 @@ export class ArtistEntity extends AbstractEntity {
   @OneToOne(() => ArtistPageEntity)
   @JoinColumn()
   page: ArtistPageEntity
+
+  @OneToMany(() => SegmentEntity, (segmentEntity) => segmentEntity.artist)
+  segments: SegmentEntity[]
 }
