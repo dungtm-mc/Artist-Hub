@@ -19,6 +19,8 @@ const Linechart = (props: LinechartProps) => {
 
     root.setThemes([am5themes_Animated.new(root)])
 
+    root._logo?.dispose()
+
     const chart = root.container.children.push(
       am5xy.XYChart.new(root, {
         pinchZoomX: false,

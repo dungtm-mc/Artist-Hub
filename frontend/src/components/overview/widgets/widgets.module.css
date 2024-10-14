@@ -4,7 +4,8 @@
 
 .test2,
 .test4,
-.test5 {
+.test5,
+.test6 {
   width: 50%;
   margin-top: 20px;
 }
