@@ -1,7 +1,7 @@
 import * as am5 from '@amcharts/amcharts5'
 import * as am5xy from '@amcharts/amcharts5/xy'
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated'
-import { useLayoutEffect } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 
 interface BarchartProps {
   data: {
@@ -11,8 +11,10 @@ interface BarchartProps {
 }
 
 const Barchart = (props: BarchartProps) => {
+  const chartRef = useRef(null)
+
   useLayoutEffect(() => {
-    const root = am5.Root.new('chartdiv')
+    const root = am5.Root.new(chartRef.current!)
 
     root.setThemes([am5themes_Animated.new(root)])
 
@@ -128,7 +130,7 @@ const Barchart = (props: BarchartProps) => {
     }
   }, [props.data])
 
-  return <div id="chartdiv" style={{ width: '100%', height: '500px' }}></div>
+  return <div ref={chartRef} style={{ width: '100%', height: '500px' }}></div>
 }
 
 export default Barchart

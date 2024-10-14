@@ -13,7 +13,7 @@ interface TableWidgetProps {
 
 const TableWidget = (props: TableWidgetProps) => {
   const rows = props.data.map((row) => (
-    <Table.Tr>
+    <Table.Tr key={row.segment}>
       <Table.Td>{row.segment}</Table.Td>
       <Table.Td>{row.fans}</Table.Td>
       <Table.Td>{row.ctr}%</Table.Td>

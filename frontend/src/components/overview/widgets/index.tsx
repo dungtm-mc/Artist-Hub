@@ -2,6 +2,7 @@ import BarchartWidget from './barchart-widget'
 import CampaignWidget from './campaign-widget'
 import LinechartWidget from './linechart-widget'
 import SingleWidget from './single-widget'
+import StreamingPlatformsWidget from './streaming-platforms-widget'
 import StreamingSongsWidget from './streaming-songs-widget'
 import TableWidget from './table-widget'
 import styles from './widgets.module.css'
@@ -137,6 +138,26 @@ const Widgets = () => {
     ]
   }
 
+  const testStreamingPlatforms = {
+    data: [
+      {
+        platform: 'YouTube',
+        icon: '',
+        value: 200000000
+      },
+      {
+        platform: 'Spotify',
+        icon: '',
+        value: 350000000
+      },
+      {
+        platform: 'Apple Music',
+        icon: '',
+        value: 100000000
+      }
+    ]
+  }
+
   return (
     <>
       <div className={styles.test}>
@@ -174,6 +195,9 @@ const Widgets = () => {
       </div>
       <div className={styles.test6}>
         <StreamingSongsWidget data={testStreamingSongs.data} />
+      </div>
+      <div className={styles.test6}>
+        <StreamingPlatformsWidget data={testStreamingPlatforms.data} />
       </div>
     </>
   )
