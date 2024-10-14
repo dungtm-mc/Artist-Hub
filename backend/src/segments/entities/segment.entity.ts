@@ -1,8 +1,9 @@
+import { AbstractEntity } from 'src/common/abstract.entity'
 import { ArtistEntity } from '../../artist/entities/artist.entity'
 import { Column, Entity, ManyToOne } from 'typeorm'
 
 @Entity()
-export class SegmentEntity {
+export class SegmentEntity extends AbstractEntity {
   @Column()
   name: string
 
@@ -11,6 +12,9 @@ export class SegmentEntity {
 
   @Column()
   repeatedCustomer: boolean
+
+  @Column()
+  newCustomer: boolean
 
   @ManyToOne(() => ArtistEntity)
   artist: ArtistEntity
