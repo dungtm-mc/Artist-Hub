@@ -29,7 +29,7 @@ const BarchartWidget = (props: ChartWidgetProps) => {
         </div>
         <div className={styles.stats}>
           {props.stats.map((stat) => (
-            <div className={styles.stat}>
+            <div className={styles.stat} key={stat.title}>
               <span className={styles.statTitle}>{stat.title}</span>
               <span className={styles.statValue}>
                 <span>{stat.value.toLocaleString()}</span>
