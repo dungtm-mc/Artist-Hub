@@ -2,6 +2,7 @@ import BarchartWidget from './barchart-widget'
 import CampaignWidget from './campaign-widget'
 import LinechartWidget from './linechart-widget'
 import SingleWidget from './single-widget'
+import StreamingSongsWidget from './streaming-songs-widget'
 import TableWidget from './table-widget'
 import styles from './widgets.module.css'
 
@@ -119,6 +120,23 @@ const Widgets = () => {
     color: 'green'
   }
 
+  const testStreamingSongs = {
+    data: [
+      {
+        song: 'Bad Guy Bad Guy Bad Guy',
+        value: 200000
+      },
+      {
+        song: 'HIT ME HARD',
+        value: 350000
+      },
+      {
+        song: 'Happier',
+        value: 100000
+      }
+    ]
+  }
+
   return (
     <>
       <div className={styles.test}>
@@ -153,6 +171,9 @@ const Widgets = () => {
           color={testLinechartWidget.color}
           data={testLinechartWidget.data}
         />
+      </div>
+      <div className={styles.test6}>
+        <StreamingSongsWidget data={testStreamingSongs.data} />
       </div>
     </>
   )
