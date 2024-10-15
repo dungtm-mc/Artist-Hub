@@ -8,6 +8,7 @@ import TableWidget from './table-widget'
 import styles from './widgets.module.css'
 import tiktokLogo from '../../../public/overview/social/tiktok.svg'
 import SocialWidget from './social-widget'
+import TotalSaleWidget from './total-sale-widget'
 
 const Widgets = () => {
   const testChartWidget = {
@@ -208,6 +209,18 @@ const Widgets = () => {
     ]
   }
 
+  const testTotalSale = {
+    data: [
+      { category: 'Licensing', percent: 25 },
+      { category: 'Streaming', percent: 25 },
+      { category: 'Merchandise', percent: 13.9 },
+      { category: 'Concert', percent: 11.2 },
+      { category: 'Music', percent: 13.6 },
+      { category: 'Other', percent: 11.3 }
+    ],
+    total: 158_000_000
+  }
+
   return (
     <>
       <div className={styles.test}>
@@ -255,6 +268,12 @@ const Widgets = () => {
           logo={testSocialWidget.logo}
           stat={testSocialWidget.stat}
           data={testSocialWidget.data}
+        />
+      </div>
+      <div className={styles.test6}>
+        <TotalSaleWidget
+          data={testTotalSale.data}
+          total={testTotalSale.total}
         />
       </div>
     </>
