@@ -56,6 +56,29 @@ const Piechart = (props: PiechartProps) => {
       stroke: am5.color('#161616')
     })
 
+    const colors = [
+      am5.color('#D0D7FF'),
+      am5.color('#8773FF'),
+      am5.color('#7F81F6'),
+      am5.color('#B4DDFC'),
+      am5.color('#06B1A8'),
+      am5.color('#B4DDFC')
+    ]
+
+    let fillUid = 0
+
+    series.slices.template.adapters.add('fill', (_, target) => {
+      if (target.dataItem) {
+        if (fillUid === 0) {
+          fillUid = target.dataItem.uid
+          return colors[0]
+        }
+
+        return colors[(target.dataItem.uid - fillUid) % colors.length]
+      }
+      return colors[0]
+    })
+
     series.states.create('hidden', {
       endAngle: -90
     })
