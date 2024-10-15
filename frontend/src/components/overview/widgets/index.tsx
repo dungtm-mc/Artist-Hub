@@ -9,6 +9,7 @@ import styles from './widgets.module.css'
 import tiktokLogo from '../../../public/overview/social/tiktok.svg'
 import SocialWidget from './social-widget'
 import TotalSaleWidget from './total-sale-widget'
+import MonthlySaleWidget from './monthly-sale-widget'
 
 const Widgets = () => {
   const testChartWidget = {
@@ -221,6 +222,83 @@ const Widgets = () => {
     total: 158_000_000
   }
 
+  const testMonthlySale = {
+    data: [
+      {
+        month: 'January',
+        val1: 20_000_000,
+        val2: 80_000_000,
+        val3: 40_000_000
+      },
+      {
+        month: 'February',
+        val1: 50_000_000,
+        val2: 100_000_000,
+        val3: 70_000_000
+      },
+      {
+        month: 'March',
+        val1: 10_000_000,
+        val2: 10_000_000,
+        val3: 90_000_000
+      },
+      {
+        month: 'April',
+        val1: 30_000_000,
+        val2: 90_000_000,
+        val3: 50_000_000
+      },
+      {
+        month: 'May',
+        val1: 40_000_000,
+        val2: 70_000_000,
+        val3: 30_000_000
+      },
+      {
+        month: 'June',
+        val1: 60_000_000,
+        val2: 20_000_000,
+        val3: 80_000_000
+      },
+      {
+        month: 'July',
+        val1: 70_000_000,
+        val2: 30_000_000,
+        val3: 60_000_000
+      },
+      {
+        month: 'August',
+        val1: 20_000_000,
+        val2: 40_000_000,
+        val3: 100_000_000
+      },
+      {
+        month: 'September',
+        val1: 80_000_000,
+        val2: 10_000_000,
+        val3: 120_000_000
+      },
+      {
+        month: 'October',
+        val1: 150_000_000,
+        val2: 50_000_000,
+        val3: 30_000_000
+      },
+      {
+        month: 'November',
+        val1: 90_000_000,
+        val2: 100_000_000,
+        val3: 70_000_000
+      },
+      {
+        month: 'December',
+        val1: 30_000_000,
+        val2: 20_000_000,
+        val3: 140_000_000
+      }
+    ]
+  }
+
   return (
     <>
       <div className={styles.test}>
@@ -275,6 +353,9 @@ const Widgets = () => {
           data={testTotalSale.data}
           total={testTotalSale.total}
         />
+      </div>
+      <div className={styles.test6}>
+        <MonthlySaleWidget data={testMonthlySale.data} />
       </div>
     </>
   )

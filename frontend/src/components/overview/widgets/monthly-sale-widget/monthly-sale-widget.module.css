@@ -1,0 +1,10 @@
+.widget {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  height: 320px;
+  padding: 16px 24px 24px 0;
+}
+
+.title {
+  padding-left: 24px;
+}
