@@ -6,6 +6,8 @@ import StreamingPlatformsWidget from './streaming-platforms-widget'
 import StreamingSongsWidget from './streaming-songs-widget'
 import TableWidget from './table-widget'
 import styles from './widgets.module.css'
+import tiktokLogo from '../../../public/overview/social/tiktok.svg'
+import SocialWidget from './social-widget'
 
 const Widgets = () => {
   const testChartWidget = {
@@ -158,6 +160,54 @@ const Widgets = () => {
     ]
   }
 
+  const testSocialWidget = {
+    platform: 'TikTok',
+    logo: tiktokLogo,
+    stat: 268_000_000,
+    data: [
+      {
+        period: '1',
+        value: 5
+      },
+      {
+        period: '2',
+        value: 8
+      },
+      {
+        period: '3',
+        value: 7
+      },
+      {
+        period: '4',
+        value: 10
+      },
+      {
+        period: '5',
+        value: 2
+      },
+      {
+        period: '6',
+        value: 4
+      },
+      {
+        period: '7',
+        value: 9
+      },
+      {
+        period: '8',
+        value: 3
+      },
+      {
+        period: '9',
+        value: 1
+      },
+      {
+        period: '10',
+        value: 6
+      }
+    ]
+  }
+
   return (
     <>
       <div className={styles.test}>
@@ -198,6 +248,14 @@ const Widgets = () => {
       </div>
       <div className={styles.test6}>
         <StreamingPlatformsWidget data={testStreamingPlatforms.data} />
+      </div>
+      <div className={styles.test}>
+        <SocialWidget
+          platform={testSocialWidget.platform}
+          logo={testSocialWidget.logo}
+          stat={testSocialWidget.stat}
+          data={testSocialWidget.data}
+        />
       </div>
     </>
   )

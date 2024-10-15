@@ -1,0 +1,37 @@
+.widget {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 152px;
+}
+
+.title {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-secondary);
+}
+
+.logo {
+  height: 24px;
+  width: 24px;
+  border-radius: 1000px;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  flex-grow: 1;
+  position: relative;
+}
+
+.stat {
+  font-size: 1.75rem;
+  position: absolute;
+  left: 24px;
+}
