@@ -81,32 +81,42 @@ const Columnchart = (props: ColumnchartProps) => {
       width: 28
     })
 
-    series.columns.template.adapters.add('fill', (fill, target) => {
-      const dataItem = target.dataItem
-      if (dataItem && dataItem.dataContext) {
-        return dataItem.dataContext.color
+    const colors = [
+      am5.color('#8773FF'),
+      am5.color('#06B1A8'),
+      am5.color('#C6C7F8')
+    ]
+
+    let fillUid = 0
+
+    series.columns.template.adapters.add('fill', (_, target) => {
+      if (target.dataItem) {
+        if (fillUid === 0) {
+          fillUid = target.dataItem.uid
+          return colors[0]
+        }
+
+        return colors[(target.dataItem.uid - fillUid) % colors.length]
       }
-      return chart.get('colors').getIndex(series.columns.indexOf(target))
+      return colors[0]
     })
 
-    series.columns.template.adapters.add('stroke', (stroke, target) => {
-      const dataItem = target.dataItem
-      if (dataItem && dataItem.dataContext) {
-        return dataItem.dataContext.color
+    let strokeUid = 0
+
+    series.columns.template.adapters.add('stroke', (_, target) => {
+      if (target.dataItem) {
+        if (strokeUid === 0) {
+          strokeUid = target.dataItem.uid
+          return colors[0]
+        }
+
+        return colors[(target.dataItem.uid - strokeUid) % colors.length]
       }
-      return chart.get('colors').getIndex(series.columns.indexOf(target))
+      return am5.color('#ffffff')
     })
 
-    const colors = ['#8773FF', '#06B1A8', '#C6C7F8']
-
-    const data = props.data
-
-    data.forEach((item, index) => {
-      item.color = colors[index % colors.length]
-    })
-
-    xAxis.data.setAll(data)
-    series.data.setAll(data)
+    xAxis.data.setAll(props.data)
+    series.data.setAll(props.data)
 
     series.appear(1000)
     chart.appear(1000, 100)
