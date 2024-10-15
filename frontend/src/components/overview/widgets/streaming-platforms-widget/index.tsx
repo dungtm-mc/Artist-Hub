@@ -1,6 +1,5 @@
 import Columnchart from './columnchart'
 import styles from './streaming-platforms-widget.module.css'
-import ValueX from './valueX'
 
 interface StreamingPlatformsWidgetProps {
   data: {

@@ -1,4 +1,4 @@
-import Logo from '../../Logo/logo'
+import Logo from '../../Logo'
 import styles from './background.module.css'
 import Color from '../../../public/login/color.png'
 import Overlay from '../../../public/login/overlay.png'
