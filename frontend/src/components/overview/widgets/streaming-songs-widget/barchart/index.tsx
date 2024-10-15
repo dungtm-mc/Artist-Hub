@@ -95,13 +95,6 @@ const Barchart = (props: BarchartProps) => {
       chart.root.dom.style.height = `${chartHeight}px`
     })
 
-    // series.columns.template.adapters.add('fill', (_, target) => {
-    //   const dataItem = target.dataItem
-    //   if (dataItem && dataItem.dataContext) {
-    //     return dataItem.dataContext.color
-    //   }
-    //   return chart.get('colors')?.getIndex(series.columns.indexOf(target))
-    // })
     const colors = [
       am5.color('#8773FF'),
       am5.color('#06B1A8'),
