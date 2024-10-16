@@ -15,5 +15,7 @@ export class ArtistPageController {
   }
 
   @Get('center')
-  async getCenter() {}
+  async getCenter() {
+    return this.artistPageService.getCenter()
+  }
 }
