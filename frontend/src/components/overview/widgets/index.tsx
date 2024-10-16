@@ -10,6 +10,7 @@ import tiktokLogo from '../../../public/overview/social/tiktok.svg'
 import SocialWidget from './social-widget'
 import TotalSaleWidget from './total-sale-widget'
 import MonthlySaleWidget from './monthly-sale-widget'
+import InsightsWidget from './insights-widget'
 
 const Widgets = () => {
   const testChartWidget = {
@@ -356,6 +357,14 @@ const Widgets = () => {
       </div>
       <div className={styles.test6}>
         <MonthlySaleWidget data={testMonthlySale.data} />
+      </div>
+      <div className={styles.test}>
+        <InsightsWidget
+          title="Average fan tenancy"
+          value={10}
+          type="year"
+          unit="Sub"
+        />
       </div>
     </>
   )
