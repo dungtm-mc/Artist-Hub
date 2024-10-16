@@ -1,21 +1,31 @@
+import { useEffect, useState } from 'react'
 import Columnchart from './columnchart'
 import styles from './streaming-platforms-widget.module.css'
 
-interface StreamingPlatformsWidgetProps {
-  data: {
-    platform: string
-    icon: string
-    value: number
-  }[]
+interface Data {
+  platform: string
+  value: number
 }
 
-const StreamingPlatformsWidget = (props: StreamingPlatformsWidgetProps) => {
-  const data = props.data.map((item) => {
-    return {
-      platform: item.platform,
-      value: item.value
-    }
-  })
+const StreamingPlatformsWidget = () => {
+  const [data, setData] = useState<Data[]>([])
+
+  useEffect(() => {
+    setData([
+      {
+        platform: 'YouTube',
+        value: 200000000
+      },
+      {
+        platform: 'Spotify',
+        value: 350000000
+      },
+      {
+        platform: 'Apple Music',
+        value: 100000000
+      }
+    ])
+  }, [])
 
   return (
     <div className={styles.widget}>
