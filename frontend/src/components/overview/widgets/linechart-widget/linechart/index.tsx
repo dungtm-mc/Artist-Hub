@@ -84,6 +84,29 @@ const Linechart = (props: LinechartProps) => {
       shadowOpacity: 0.9
     })
 
+    let bulletUid = 0
+
+    series.bullets.push((root, _, dataItem) => {
+      if (bulletUid === 0) {
+        bulletUid = dataItem.uid
+      }
+      if (dataItem.uid - bulletUid === props.data.length - 1) {
+        const container = am5.Container.new(root, {})
+        container.children.push(
+          am5.Circle.new(root, {
+            radius: 4.5,
+            stroke: am5.color(props.color),
+            strokeWidth: 3.5,
+            fill: am5.color('#000000')
+          })
+        )
+
+        return am5.Bullet.new(root, {
+          sprite: container
+        })
+      }
+    })
+
     xAxis.data.setAll(props.data)
     series.data.setAll(props.data)
 
