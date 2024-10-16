@@ -11,6 +11,7 @@ import { ProductModule } from './product/product.module'
 import { AuthModule } from './auth/auth.module'
 import { ArtistPageModule } from './artistPage/artistPage.module'
 import { WidgetModule } from './widget/widget.module'
+import { SegmentModule } from './segments/segment.module'
 
 @Module({
   imports: [
@@ -23,7 +24,8 @@ import { WidgetModule } from './widget/widget.module'
     UserModule,
     ProductModule,
     ArtistPageModule,
-    WidgetModule
+    WidgetModule,
+    SegmentModule
   ],
   controllers: [AppController],
   providers: [AppService]
