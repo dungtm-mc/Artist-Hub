@@ -7,7 +7,7 @@ interface ChartWidgetProps {
     color: string
   }
   title: string
-  information: string
+  information?: string
   stats: {
     title: string
     value: number

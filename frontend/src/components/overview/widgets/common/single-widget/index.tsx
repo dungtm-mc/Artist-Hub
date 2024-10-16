@@ -1,9 +1,10 @@
 import { IconArrowDownRight, IconArrowUpRight } from '@tabler/icons-react'
 import styles from './single-widget.module.css'
+import { formatNumber } from '../../../../../helper/formatNumber'
 
 interface SingleWidgetProps {
   title: string
-  stats: string
+  stats: number
   changePerc: number
   comparePeriod: string
 }
@@ -13,7 +14,7 @@ const SingleWidget = (props: SingleWidgetProps) => {
     <div className={styles.widget}>
       <div className={styles.above}>
         <span className={styles.title}>{props.title}</span>
-        <span className={styles.stats}>{props.stats}</span>
+        <span className={styles.stats}>{formatNumber(props.stats)}</span>
       </div>
       <div className={styles.under}>
         <span

@@ -1,13 +1,14 @@
 import { Table } from '@mantine/core'
 import styles from './table-widget.module.css'
+import { formatNumber } from '../../../../../helper/formatNumber'
 
 interface TableWidgetProps {
   title: string
   data: {
     segment: string
-    fans: string
+    fans: number
     ctr: number
-    avgRevenue: string
+    avgRevenue: number
   }[]
 }
 
@@ -15,9 +16,11 @@ const TableWidget = (props: TableWidgetProps) => {
   const rows = props.data.map((row) => (
     <Table.Tr key={row.segment}>
       <Table.Td>{row.segment}</Table.Td>
-      <Table.Td>{row.fans}</Table.Td>
+      <Table.Td>{formatNumber(row.fans)}</Table.Td>
       <Table.Td>{row.ctr}%</Table.Td>
-      <Table.Td className={styles.cellRight}>{row.avgRevenue}</Table.Td>
+      <Table.Td className={styles.cellRight}>
+        ${formatNumber(row.avgRevenue)}
+      </Table.Td>
     </Table.Tr>
   ))
 

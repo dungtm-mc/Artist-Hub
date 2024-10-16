@@ -1,4 +1,4 @@
-import { formatNumber } from '../../../../helper/formatNumber'
+import { formatNumber } from '../../../../../helper/formatNumber'
 import styles from './insights-widget.module.css'
 
 interface InsightsWidgetProps {
