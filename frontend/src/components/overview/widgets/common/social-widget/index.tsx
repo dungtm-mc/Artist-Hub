@@ -1,4 +1,4 @@
-import { formatNumber } from '../../../../helper/formatNumber'
+import { formatNumber } from '../../../../../helper/formatNumber'
 import Linechart from './linechart'
 import styles from './social-widget.module.css'
 
