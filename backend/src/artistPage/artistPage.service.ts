@@ -51,6 +51,33 @@ export class ArtistPageService {
   async getCenter() {
     return [
       {
+        key: 'total_fans'
+      },
+      {
+        key: 'new_fans'
+      },
+      {
+        key: 'campaign_opportunities'
+      },
+      {
+        key: 'fan_database'
+      },
+      {
+        key: 'fan_customers'
+      },
+      {
+        key: 'segment_by_total'
+      },
+      {
+        key: 'segment_by_revenue'
+      },
+      {
+        key: 'fan_growth_over_year'
+      },
+      {
+        key: 'fan_growth_over_month'
+      },
+      {
         key: 0,
         type: 'Streaming'
       },
